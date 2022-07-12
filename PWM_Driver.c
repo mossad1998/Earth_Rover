@@ -136,4 +136,5 @@ void PWM_Set_Duty_Cycle(int PWM_module,int Generator,char Comparator,int Duty)
 void PWM_Module_Start(int PWM_module)
 {
   PWM0_ENABLE_R |= 0x00000002;
+  //PWM0_ENABLE_R |= 0x00000008;
 }

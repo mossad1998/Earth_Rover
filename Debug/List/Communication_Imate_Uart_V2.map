@@ -1,0 +1,414 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.1.245/W32 for ARM                  18/Jun/2021  17:49:12
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Exe\Communication_Imate_Uart_V2.out
+#    Map file     =
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\List\Communication_Imate_Uart_V2.map
+#    Command line =
+#        -f C:\Users\Owner\AppData\Local\Temp\EW4C9C.tmp
+#        (F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\Clock_Driver.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\Debug_Driver.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\GPIO_Driver.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\GPTM_Driver.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\main.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\PWM_Driver.o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\UART_Driver.o
+#        --no_out_extension -o
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Exe\Communication_Imate_Uart_V2.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\List\Communication_Imate_Uart_V2.map
+#        --config G:\IAR\arm\config\linker\TexasInstruments\TM4C123GH6.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code          0x0    0x40  vector_table_M.o [4]
+                                   - 0x40    0x40
+
+"P1":                                      0x21f5
+  .text              ro code         0x40   0x49c  main.o [1]
+  .text              ro code        0x4dc   0x12c  Debug_Driver.o [1]
+  .text              ro code        0x608   0x100  Clock_Driver.o [1]
+  .text              ro code        0x708   0x15c  UART_Driver.o [1]
+  .text              ro code        0x864   0x3c4  GPIO_Driver.o [1]
+  .text              ro code        0xc28   0x328  PWM_Driver.o [1]
+  .text              ro code        0xf50   0x2f4  GPTM_Driver.o [1]
+  .text              ro code       0x1244    0x12  strcmp.o [4]
+  .text              ro code       0x1256     0x2  vector_table_M.o [4]
+  .text              ro code       0x1258    0x22  S32ToDbl.o [3]
+  .text              ro code       0x127c   0x17a  DblAdd.o [3]
+  .text              ro code       0x13f8    0x3a  DblToS32.o [3]
+  .text              ro code       0x1434    0x1a  U32ToDbl.o [3]
+  .text              ro code       0x1450    0x12  math_wrappers64.o [3]
+  .text              ro code       0x1464   0x246  DblDiv.o [3]
+  .text              ro code       0x16ac    0xe2  DblSub.o [3]
+  .text              ro code       0x1790   0x314  logx64.o [3]
+  .text              ro code       0x1aa4    0x70  frexp.o [3]
+  .text              ro code       0x1b14    0x2e  DblCmpLe.o [3]
+  .text              ro code       0x1b44   0x1a2  DblMul.o [3]
+  .text              ro code       0x1ce6    0x78  lz77_init_single.o [4]
+  .text              ro code       0x1d60    0x28  data_init.o [4]
+  .text              ro code       0x1d88    0x22  fpinit_M.o [3]
+  .iar.init_table    const         0x1dac    0x10  - Linker created -
+  .text              ro code       0x1dbc    0x1e  cmain.o [4]
+  .text              ro code       0x1dda     0x4  low_level_init.o [2]
+  .text              ro code       0x1dde     0x4  exit.o [2]
+  .text              ro code       0x1de4     0xa  cexit.o [4]
+  .text              ro code       0x1df0    0x14  exit.o [5]
+  .rodata            const         0x1e04    0x10  GPTM_Driver.o [1]
+  .rodata            const         0x1e14    0x10  GPTM_Driver.o [1]
+  .rodata            const         0x1e24    0x10  main.o [1]
+  .rodata            const         0x1e34     0xc  Debug_Driver.o [1]
+  .rodata            const         0x1e40     0xc  GPIO_Driver.o [1]
+  .rodata            const         0x1e4c     0xc  GPIO_Driver.o [1]
+  .rodata            const         0x1e58     0xc  GPTM_Driver.o [1]
+  .rodata            const         0x1e64     0xc  GPTM_Driver.o [1]
+  .rodata            const         0x1e70     0xc  GPTM_Driver.o [1]
+  .rodata            const         0x1e7c     0xc  GPTM_Driver.o [1]
+  .rodata            const         0x1e88     0xc  main.o [1]
+  .rodata            const         0x1e94     0xc  main.o [1]
+  .rodata            const         0x1ea0     0xc  main.o [1]
+  .rodata            const         0x1eac     0xc  main.o [1]
+  .text              ro code       0x1eb8     0xc  cstartup_M.o [4]
+  .rodata            const         0x1ec4     0x8  Debug_Driver.o [1]
+  .rodata            const         0x1ecc     0x8  Debug_Driver.o [1]
+  .rodata            const         0x1ed4     0x8  Debug_Driver.o [1]
+  .rodata            const         0x1edc     0x8  Debug_Driver.o [1]
+  .rodata            const         0x1ee4     0x8  Debug_Driver.o [1]
+  .rodata            const         0x1eec     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1ef4     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1efc     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1f04     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1f0c     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1f14     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1f1c     0x8  GPIO_Driver.o [1]
+  .rodata            const         0x1f24     0x8  GPTM_Driver.o [1]
+  .rodata            const         0x1f2c     0x8  GPTM_Driver.o [1]
+  .rodata            const         0x1f34     0x8  GPTM_Driver.o [1]
+  .rodata            const         0x1f3c     0x8  GPTM_Driver.o [1]
+  .rodata            const         0x1f44     0x8  main.o [1]
+  .rodata            const         0x1f4c     0x8  main.o [1]
+  .rodata            const         0x1f54     0x8  main.o [1]
+  .rodata            const         0x1f5c     0x8  main.o [1]
+  .rodata            const         0x1f64     0x8  main.o [1]
+  .rodata            const         0x1f6c     0x8  main.o [1]
+  .rodata            const         0x1f74     0x8  main.o [1]
+  .rodata            const         0x1f7c     0x8  main.o [1]
+  .rodata            const         0x1f84     0x8  main.o [1]
+  .rodata            const         0x1f8c     0x8  main.o [1]
+  .rodata            const         0x1f94     0x8  main.o [1]
+  .rodata            const         0x1f9c     0x8  PWM_Driver.o [1]
+  .rodata            const         0x1fa4     0x8  PWM_Driver.o [1]
+  .rodata            const         0x1fac     0x8  PWM_Driver.o [1]
+  .rodata            const         0x1fb4     0x8  UART_Driver.o [1]
+  .rodata            const         0x1fbc     0x8  UART_Driver.o [1]
+  .rodata            const         0x1fc4     0x0  lz77_init_single.o [4]
+  Initializer bytes  const         0x1fc4   0x271  <for P2-1>
+                                 - 0x2235  0x21f5
+
+"P2", part 1 of 2:                          0x32c
+  P2-1                        0x2000'0000   0x32c  <Init block>
+    .data            inited   0x2000'0000    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0018    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0030    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0048    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0060    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0078    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'0090    0x18  GPIO_Driver.o [1]
+    .data            inited   0x2000'00a8    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'00c0    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'00d8    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'00f0    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'0108    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'0120    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'0138    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'0150    0x18  GPTM_Driver.o [1]
+    .data            inited   0x2000'0168    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'0188    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'01a8    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'01c8    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'01e8    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'0208    0x20  PWM_Driver.o [1]
+    .data            inited   0x2000'0228    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'0248    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'0268    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'0288    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'02a8    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'02c8    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'02e8    0x20  UART_Driver.o [1]
+    .data            inited   0x2000'0308    0x20  UART_Driver.o [1]
+    .bss             inited   0x2000'0328     0x4  PWM_Driver.o [1]
+                            - 0x2000'032c   0x32c
+
+"P2", part 2 of 2:                         0x1000
+  CSTACK                      0x2000'0330  0x1000  <Block>
+    CSTACK           uninit   0x2000'0330  0x1000  <Block tail>
+                            - 0x2000'1330  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x2235     0x3'ffff  0x3'ddcb
+  0x2000'032c  0x2000'032f       0x4
+  0x2000'1330  0x2000'7fff    0x6cd0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x271 (76% of destination):
+               0x1fc4  0x271
+    1 destination range, total size 0x32c:
+          0x2000'0000  0x32c
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj: [1]
+    Clock_Driver.o          256
+    Debug_Driver.o          300       52
+    GPIO_Driver.o           964      209      168
+    GPTM_Driver.o           756      260      192
+    PWM_Driver.o            808      175      196
+    UART_Driver.o           348      213      256
+    main.o                1'180      152
+    ---------------------------------------------
+    Total:                4'612    1'061      812
+
+dl7M_tln.a: [2]
+    exit.o                    4
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                    8
+
+m7M_tls.a: [3]
+    DblAdd.o                378
+    DblCmpLe.o               46
+    DblDiv.o                582
+    DblMul.o                418
+    DblSub.o                226
+    DblToS32.o               58
+    S32ToDbl.o               34
+    U32ToDbl.o               26
+    fpinit_M.o               34
+    frexp.o                 112
+    logx64.o                788
+    math_wrappers64.o        18
+    ---------------------------------------------
+    Total:                2'720
+
+rt7M_tl.a: [4]
+    cexit.o                  10
+    cmain.o                  30
+    cstartup_M.o             12
+    data_init.o              40
+    lz77_init_single.o      120
+    strcmp.o                 18
+    vector_table_M.o         66
+    ---------------------------------------------
+    Total:                  296
+
+shb_l.a: [5]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Gaps                     22        2
+    Linker created                    16    4'096
+-------------------------------------------------
+    Grand Total:          7'678    1'079    4'908
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base        0x1dac          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x1dbc          --   Gb  - Linker created -
+?main                        0x1dbd         Code  Gb  cmain.o [4]
+AFSEL_R                 0x2000'0048   0x18  Data  Gb  GPIO_Driver.o [1]
+AMSEL_R                 0x2000'0018   0x18  Data  Gb  GPIO_Driver.o [1]
+Baud_Rate_UART_Module         0x789   0x50  Code  Gb  UART_Driver.o [1]
+CLK_Enable                    0x865   0x24  Code  Gb  GPIO_Driver.o [1]
+CLK_Enable_GPTM_Module        0xf51   0x10  Code  Gb  GPTM_Driver.o [1]
+CLK_Enable_UART_Module        0x709   0x1a  Code  Gb  UART_Driver.o [1]
+CLK_PORTS               0x2000'0000   0x18  Data  Gb  GPIO_Driver.o [1]
+CLK_PWM_Enable                0xc29   0x18  Code  Gb  PWM_Driver.o [1]
+CLK_UART_Modules        0x2000'0228   0x20  Data  Gb  UART_Driver.o [1]
+CSTACK$$Base            0x2000'0330          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1330          --   Gb  - Linker created -
+DATA_R                  0x2000'0078   0x18  Data  Gb  GPIO_Driver.o [1]
+DEN_R                   0x2000'0030   0x18  Data  Gb  GPIO_Driver.o [1]
+DIR_R                   0x2000'0060   0x18  Data  Gb  GPIO_Driver.o [1]
+Debug_Intialization           0x561   0x88  Code  Gb  Debug_Driver.o [1]
+Debug_Led                     0x4dd   0x84  Code  Gb  Debug_Driver.o [1]
+Enable_Timer_Number           0xf61   0x46  Code  Gb  GPTM_Driver.o [1]
+Enable_UART_Module            0x723   0x66  Code  Gb  UART_Driver.o [1]
+GPIO_PORT_UNLOCK              0x889   0x3a  Code  Gb  GPIO_Driver.o [1]
+GPTM_Delay_Unit              0x1159   0x84  Code  Gb  GPTM_Driver.o [1]
+GPTM_Number_1_Intialization
+                              0x27f   0x32  Code  Gb  main.o [1]
+GPTM_Number_3_Intialization
+                              0x2b1   0x6c  Code  Gb  main.o [1]
+PCTL_R                  0x2000'0090   0x18  Data  Gb  GPIO_Driver.o [1]
+PIN_ANALOG_DIGITAL            0x8c3   0xcc  Code  Gb  GPIO_Driver.o [1]
+PIN_CONFIGURE                 0xa7b   0xe8  Code  Gb  GPIO_Driver.o [1]
+PIN_FUNCTION_SELECT           0x98f   0x76  Code  Gb  GPIO_Driver.o [1]
+PIN_INPUT_OUTPUT              0xa05   0x76  Code  Gb  GPIO_Driver.o [1]
+PIN_WRITE_DIGITAL             0xb63   0x68  Code  Gb  GPIO_Driver.o [1]
+PWM_Action_Comparator_Down
+                              0xd7b   0x98  Code  Gb  PWM_Driver.o [1]
+PWM_Action_For_Load           0xce3   0x98  Code  Gb  PWM_Driver.o [1]
+PWM_CMPA_R              0x2000'0208   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_CMPB_R              0x2000'01e8   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_CTL_R               0x2000'0168   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_GENA_R              0x2000'0188   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_GENB_R              0x2000'01a8   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_Generator_Enable          0xc99   0x4a  Code  Gb  PWM_Driver.o [1]
+PWM_Intialization_1           0x1fd   0x82  Code  Gb  main.o [1]
+PWM_Load_R              0x2000'01c8   0x20  Data  Gb  PWM_Driver.o [1]
+PWM_Load_Value          0x2000'0328    0x4  Data  Gb  PWM_Driver.o [1]
+PWM_Module_Start              0xef9    0xc  Code  Gb  PWM_Driver.o [1]
+PWM_Set_Duty_Cycle            0xe79   0x80  Code  Gb  PWM_Driver.o [1]
+PWM_Set_Frequency             0xe15   0x64  Code  Gb  PWM_Driver.o [1]
+PortA_Intialization           0x325   0x6a  Code  Gb  main.o [1]
+Receive_UART_Module           0x813   0x18  Code  Gb  UART_Driver.o [1]
+Region$$Table$$Base          0x1dac          --   Gb  - Linker created -
+Region$$Table$$Limit         0x1dbc          --   Gb  - Linker created -
+Servo_Horizontal              0x40b   0x3e  Code  Gb  main.o [1]
+Servo_Vertical                0x44d   0x3e  Code  Gb  main.o [1]
+Set_Clock_MHz                 0x609  0x100  Code  Gb  Clock_Driver.o [1]
+TIMERS_Aload_R          0x2000'0120   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_CFG_R            0x2000'00c0   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_Clear_R          0x2000'0138   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_Flag_R           0x2000'0150   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_R                0x2000'00a8   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_TAMATCHR_R       0x2000'00f0   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_TAMR_R           0x2000'00d8   0x18  Data  Gb  GPTM_Driver.o [1]
+TIMERS_TAPR_R           0x2000'0108   0x18  Data  Gb  GPTM_Driver.o [1]
+Timer_Number_Count_limit
+                             0x105b    0xa  Code  Gb  GPTM_Driver.o [1]
+Timer_Number_Event_Mode
+                             0x1065   0x86  Code  Gb  GPTM_Driver.o [1]
+Timer_Number_Mode             0xff5   0x66  Code  Gb  GPTM_Driver.o [1]
+Timer_Number_Option           0xfa7   0x4e  Code  Gb  GPTM_Driver.o [1]
+Timer_Number_Prescaler       0x10ed   0x56  Code  Gb  GPTM_Driver.o [1]
+Timer_Number_Ticks           0x1143   0x16  Code  Gb  GPTM_Driver.o [1]
+UART_BUFFER_R           0x2000'02e8   0x20  Data  Gb  UART_Driver.o [1]
+UART_CLK_R              0x2000'02a8   0x20  Data  Gb  UART_Driver.o [1]
+UART_CTL_R              0x2000'0248   0x20  Data  Gb  UART_Driver.o [1]
+UART_DR_R               0x2000'0308   0x20  Data  Gb  UART_Driver.o [1]
+UART_FBRD_R             0x2000'0288   0x20  Data  Gb  UART_Driver.o [1]
+UART_IBRD_R             0x2000'0268   0x20  Data  Gb  UART_Driver.o [1]
+UART_Intialization            0x395   0x76  Code  Gb  main.o [1]
+UART_LCRH_R             0x2000'02c8   0x20  Data  Gb  UART_Driver.o [1]
+Use_PWM_Divisor               0xc41   0x58  Code  Gb  PWM_Driver.o [1]
+Word_Length_UART_Module
+                              0x7d9   0x3a  Code  Gb  UART_Driver.o [1]
+__aeabi_cdcmple              0x1b15         Code  Gb  DblCmpLe.o [3]
+__aeabi_d2iz                 0x13f9         Code  Gb  DblToS32.o [3]
+__aeabi_dadd                 0x127d         Code  Gb  DblAdd.o [3]
+__aeabi_ddiv                 0x1465         Code  Gb  DblDiv.o [3]
+__aeabi_dmul                 0x1b45         Code  Gb  DblMul.o [3]
+__aeabi_dsub                 0x16ad         Code  Gb  DblSub.o [3]
+__aeabi_i2d                  0x1259         Code  Gb  S32ToDbl.o [3]
+__aeabi_ui2d                 0x1435         Code  Gb  U32ToDbl.o [3]
+__cmain                      0x1dbd         Code  Gb  cmain.o [4]
+__exit                       0x1df1   0x14  Code  Gb  exit.o [5]
+__iar_Log64                  0x1791  0x278  Code  Lc  logx64.o [3]
+__iar_dadd                   0x16bd         Code  Gb  DblSub.o [3]
+__iar_data_init3             0x1d61   0x28  Code  Gb  data_init.o [4]
+__iar_dsub                   0x128d         Code  Gb  DblAdd.o [3]
+__iar_dsubStart              0x129f         Code  Gb  DblAdd.o [3]
+__iar_frexp                  0x1ab1         Code  Gb  frexp.o [3]
+__iar_frexpl                 0x1ab1         Code  Gb  frexp.o [3]
+__iar_init_vfp               0x1d89         Code  Gb  fpinit_M.o [3]
+__iar_log64                  0x1aa1    0x4  Code  Gb  logx64.o [3]
+__iar_log_medium             0x1aa1    0x4  Code  Gb  logx64.o [3]
+__iar_log_medium64           0x1aa1    0x4  Code  Gb  logx64.o [3]
+__iar_log_mediuml            0x1aa1    0x4  Code  Gb  logx64.o [3]
+__iar_lz77_init_single3
+                             0x1ce7   0x78  Code  Gb  lz77_init_single.o [4]
+__iar_program_start          0x1eb9         Code  Gb  cstartup_M.o [4]
+__iar_softfp___iar_frexp64
+                             0x1aa5         Code  Gb  frexp.o [3]
+__iar_softfp_frexp           0x1aa5         Code  Gb  frexp.o [3]
+__iar_softfp_frexpl          0x1aa5         Code  Gb  frexp.o [3]
+__iar_vfp_log                0x1457    0xc  Code  Gb  math_wrappers64.o [3]
+__low_level_init             0x1ddb    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [4]
+_call_main                   0x1dc9         Code  Gb  cmain.o [4]
+_exit                        0x1de5         Code  Gb  cexit.o [4]
+_main                        0x1dd7         Code  Gb  cmain.o [4]
+exit                         0x1ddf    0x4  Code  Gb  exit.o [2]
+log                          0x1aa1    0x4  Code  Gb  logx64.o [3]
+logl                         0x1aa1    0x4  Code  Gb  logx64.o [3]
+main                           0x41  0x1bc  Code  Gb  main.o [1]
+strcmp                       0x1245         Code  Gb  strcmp.o [4]
+
+
+[1] = F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  7'678 bytes of readonly  code memory
+  1'079 bytes of readonly  data memory
+  4'908 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

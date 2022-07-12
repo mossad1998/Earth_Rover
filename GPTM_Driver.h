@@ -20,6 +20,10 @@ extern void Timer_Number_Reset_Counts(int timer_number);
 extern void Timer_Number_Prescaler (int timer_number ,int System_Clock, int timer_clock);
 extern void Timer_Number_Ticks(int timer_number,int ticks);           //Enable or Disable Analog and Digital
 extern void GPTM_Delay_Unit(int timer_number,int Counts,char Unit[10]);
+extern void Timer_Number_Clear(int timer_number);
+bool Timer_Number_Flag(int timer_number);
+
+
 
 
 

@@ -19,7 +19,7 @@
 
 extern void CLK_Enable_UART_Module(int UART_module);                            //Enable clock for different modules
 extern void Enable_UART_Module(int UART_module,char type[10]);                  //Enable or Disable different modules
-extern void Baud_Rate_UART_Module(int UART_module,int speed);                   //Specify Baud rate
+extern void Baud_Rate_UART_Module(int UART_module,int speed,int System_Clock);  //Specify Baud rate
 extern void Word_Length_UART_Module(int UART_module,int Length);                //Specify word length
 extern void Transmit_UART_Module(int UART_module,char data);                    //To transmit data
 extern char Receive_UART_Module(int UART_module);                               //To receive data

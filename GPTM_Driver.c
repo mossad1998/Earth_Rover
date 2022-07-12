@@ -128,6 +128,7 @@ void GPTM_Delay_Unit(int timer_number,int Counts,char Unit[10])
          while((*TIMERS_Flag_R[timer_number] & 0x1)==0);
          *TIMERS_Clear_R[timer_number]= 1;
         }
+      
     }
   }
 
@@ -142,7 +143,13 @@ void Timer_Number_Reset_Counts(int timer_number)
     *TIMERS_TAR_R[timer_number] = 0;
   }
 
+	void Timer_Number_Clear(int timer_number)
+	{
+		*TIMERS_Clear_R[timer_number]= 1;
+	}
 
-
-
+bool Timer_Number_Flag(int timer_number)
+	{
+		return((*TIMERS_Flag_R[timer_number] & 0x1));
+	}
 

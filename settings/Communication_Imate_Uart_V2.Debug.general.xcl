@@ -1,0 +1,15 @@
+"G:\IAR\arm\bin\armproc.dll" 
+
+"G:\IAR\arm\bin\armlmiftdi.dll" 
+
+"F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Exe\Communication_Imate_Uart_V2.out" 
+
+--plugin="G:\IAR\arm\bin\armbat.dll" 
+
+--device_macro="G:\IAR\arm\config\debugger\TexasInstruments\TM4C123.dmac" 
+
+--flash_loader="G:\IAR\arm\config\flashloader\TexasInstruments\FlashTC4_H6_o.board" 
+
+
+
+

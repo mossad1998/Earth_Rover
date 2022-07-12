@@ -1,21 +1,16 @@
 main.pbi: \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1\main.c \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/tm4c123gh6pm.h \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/GPIO_Driver.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Config_Normal.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdbool.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdio.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ysizet.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\string.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product_string.h \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/UART_Driver.h \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/Clock_Driver.h \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/PWM_Driver.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\math.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_float_setup.h \
-  F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1/Debug_Driver.h
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\main.c \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/tm4c123gh6pm.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/GPIO_Driver.h \
+  G:\IAR\arm\inc\c\stdint.h G:\IAR\arm\inc\c\ycheck.h \
+  G:\IAR\arm\inc\c\yvals.h G:\IAR\arm\inc\c\DLib_Defaults.h \
+  G:\IAR\arm\inc\c\DLib_Config_Normal.h G:\IAR\arm\inc\c\DLib_Product.h \
+  G:\IAR\arm\inc\c\stdbool.h G:\IAR\arm\inc\c\stdio.h \
+  G:\IAR\arm\inc\c\ysizet.h G:\IAR\arm\inc\c\string.h \
+  G:\IAR\arm\inc\c\DLib_Product_string.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/GPTM_Driver.h \
+  G:\IAR\arm\inc\c\math.h G:\IAR\arm\inc\c\DLib_float_setup.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/Debug_Driver.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/PWM_Driver.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/Clock_Driver.h \
+  F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2/UART_Driver.h

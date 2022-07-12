@@ -20,10 +20,11 @@ volatile uint32_t* PUR_R[]={&GPIO_PORTA_PUR_R,&GPIO_PORTB_PUR_R,&GPIO_PORTC_PUR_
 volatile uint32_t* DATA_R[]={&GPIO_PORTA_DATA_R,&GPIO_PORTB_DATA_R,&GPIO_PORTC_DATA_R,          //Array of DATA FRegisters for each port
                              &GPIO_PORTD_DATA_R,&GPIO_PORTE_DATA_R,&GPIO_PORTF_DATA_R};
 
-volatile uint32_t* PCTL_R[]={&GPIO_PORTA_PCTL_R,&GPIO_PORTB_PCTL_R,&GPIO_PORTC_PCTL_R,          //Array of PCTL FRegisters for each port
+volatile uint32_t* PCTL_R[]={&GPIO_PORTA_PCTL_R,&GPIO_PORTB_PCTL_R,&GPIO_PORTC_PCTL_R,          //Array of DATA FRegisters for each port
                              &GPIO_PORTD_PCTL_R,&GPIO_PORTE_PCTL_R,&GPIO_PORTF_PCTL_R};
                   
-
+volatile uint32_t* CR_R[]={&GPIO_PORTA_CR_R,&GPIO_PORTB_CR_R,&GPIO_PORTC_CR_R,          //Array of DATA CR Registers for each port
+                             &GPIO_PORTD_CR_R,&GPIO_PORTE_CR_R,&GPIO_PORTF_CR_R};
 
 void CLK_Enable(char port_name)                                                                 //To Eable CLK for specific port
 {
@@ -32,21 +33,37 @@ void CLK_Enable(char port_name)                                                 
     dummy = SYSCTL_RCGCGPIO_R ;                                             
 }
 
-void GPIO_PORT_LOCK(char port_name)                                                             //To Unlock port F or D
+void GPIO_PORT_UNLOCK(char port_name)                                                             //To Unlock port F or D
 {
     if(port_name == 'F')
     {
     GPIO_PORTF_LOCK_R = 0x4C4F434B ;                                                            //To Activate CLK for port F
-    GPIO_PORTF_CR_R = 0x1F ;                                                                    //To allow changes 
     }
     else if(port_name == 'D')
     {
     GPIO_PORTD_LOCK_R = 0x4C4F434B ;                                                            //To Activate CLK for port F
-    GPIO_PORTD_CR_R = 0x3F ;                                                                    //To allow changes
     }  
+    else if(port_name == 'E')
+    {
+    GPIO_PORTE_LOCK_R = 0x4C4F434B ;                                                            //To Activate CLK for port F
+    }
 }
 
-
+void PIN_CONTROL_UNLOCK(char port_name,int pin)                                                             //To Unlock port F or D
+{
+    if(port_name == 'F')
+    {
+    *CR_R[port_name-65] |= 1UL << pin;                                                         //To Enable DEN
+    }
+    else if(port_name == 'D')
+    {
+    *CR_R[port_name-65] |= 1UL << pin;                                                         //To Enable DEN
+    }  
+    else if(port_name == 'E')
+    {
+    *CR_R[port_name-65] |= 1UL << pin;                                                         //To Enable DEN
+    }
+}
 void PIN_ANALOG_DIGITAL(char port_name,int pin,char type[10])                                   //To choose digital or analog
 {
     if(strcmp(type , "Digital")==0)
@@ -100,11 +117,16 @@ if(strcmp(type,"Pullup")==0)
 
 }
 
-void PIN_CONFIGURE(char port_name,int pin,char type[10])                                        //To configure pins
+void PIN_CONFIGURE(char port_name,int pin,char type[10])
 {
   if(strcmp(type,"UART")==0)
     *PCTL_R[port_name-65]|= 1UL << 4*pin;
-
+  else if(strcmp(type,"ADC")==0)
+    *PCTL_R[port_name-65]&= ~(1UL << 4*pin);
+  else if(strcmp(type,"PWM")==0)
+    *PCTL_R[port_name-65]|= 0x4 << 4*pin;
+  else if(strcmp(type,"Capture")==0)
+    *PCTL_R[port_name-65]|= 0x7 << 4*pin;
 }
 
 

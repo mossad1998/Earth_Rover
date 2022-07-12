@@ -1,18 +1,18 @@
-"F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1\GPTM_Driver.c"
+"F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\GPTM_Driver.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1\Debug\Obj\GPTM_Driver.pbi.dep
+F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2\Debug\Obj\GPTM_Driver.pbi.dep
 -o
 GPTM_Driver.pbi
 -I
-F:\Work\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V1
+F:\Tiva_C\Communication_Imate_Uart\Communication_Imate_Uart_V2
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc
+G:\IAR\arm\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc\c
+G:\IAR\arm\inc\c
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -305,8 +305,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc\c
 -D__EDG_FLOAT80_ENABLING_POSSIBLE=0
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -D__EDG_INT128_EXTENSIONS_ALLOWED=0
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc\c\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.4\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="G:\IAR\arm\inc\c\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="G:\\IAR\\arm\\inc\\c\\DLib_Config_Normal.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.50.1.245/W32 for ARM"
 -D_VA_DEFINED=
 -D_VA_LIST=struct __va_list

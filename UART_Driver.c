@@ -46,10 +46,10 @@ void Enable_UART_Module(int UART_module,char type[10])                          
   }
 
 
-void Baud_Rate_UART_Module(int UART_module,int speed)                           //Specify Baud rate
+void Baud_Rate_UART_Module(int UART_module,int speed,int System_Clock)                           //Specify Baud rate
   {
-    int ibrd = 1000000 / speed;                                                 //Integer value
-    int fbrd = (int)((((1000000 - ibrd*speed)/speed)*64)+.5);                   //Fraction value
+    int ibrd = (System_Clock*1000000) / (16*speed);                                                 //Integer value
+    int fbrd = (int)(((((System_Clock*1000000) - ibrd*16*speed)/(16*speed))*64)+.5);                   //Fraction value
     *UART_IBRD_R[UART_module] = ibrd;
     *UART_FBRD_R[UART_module] = fbrd;
     *UART_CLK_R[UART_module]= 0;
